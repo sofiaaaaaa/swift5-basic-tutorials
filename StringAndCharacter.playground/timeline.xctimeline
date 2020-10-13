@@ -3,13 +3,18 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/jihooyim/Documents/Test/basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=1443&amp;EndingColumnNumber=16&amp;EndingLineNumber=95&amp;StartingColumnNumber=5&amp;StartingLineNumber=95&amp;Timestamp=624186015.551304"
+         documentLocation = "file:///Users/jihooyim/Documents/Test/basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=1443&amp;EndingColumnNumber=16&amp;EndingLineNumber=95&amp;StartingColumnNumber=5&amp;StartingLineNumber=95&amp;Timestamp=624244704.730822"
          lockedSize = "{680, 103}"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/jihooyim/Documents/Test/basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=30&amp;CharacterRangeLoc=2264&amp;EndingColumnNumber=0&amp;EndingLineNumber=152&amp;StartingColumnNumber=1&amp;StartingLineNumber=151&amp;Timestamp=624186015.551456"
+         documentLocation = "file:///Users/jihooyim/Documents/Test/basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=30&amp;CharacterRangeLoc=2264&amp;EndingColumnNumber=0&amp;EndingLineNumber=152&amp;StartingColumnNumber=1&amp;StartingLineNumber=151&amp;Timestamp=624244704.730989"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/jihooyim/Documents/Test/basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=0&amp;CharacterRangeLoc=4981&amp;EndingColumnNumber=0&amp;EndingLineNumber=273&amp;StartingColumnNumber=0&amp;StartingLineNumber=273&amp;Timestamp=624244704.731112"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

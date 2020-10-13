@@ -228,3 +228,100 @@ let weatherStr = String(format: "날씨는 '%@', 온도는 %.1f도 입니다." ,
 // String Interpolation 문법으로 dateStr, weatherStr을 공백 하나로 연결해 주세요.
 let finalStr = "\(dateStr) \(weatherStr)"
 print(finalStr)
+
+
+/*:
+ 
+ # String Indices
+ 
+ */
+
+let str3 = "Swift"
+
+let firstCh = str3[str3.startIndex]
+
+print(firstCh)
+
+let lastCharIndex = str3.index(before: str3.endIndex)
+let lastCh = str3[lastCharIndex]
+//let endCh = str3[str3.endIndex]
+
+print(lastCh)
+
+let secondCharIndex = str3.index(after: str3.startIndex)
+let secondCh = str3[secondCharIndex]
+print(secondCh)
+
+var thirdChIndex = str3.index(str3.startIndex, offsetBy: 2)
+var thirdCh = str3[thirdChIndex]
+print(thirdCh)
+
+// index의 유효범위가 벗어나는 경우 앱에 crash가 발생할 수 있다.
+thirdChIndex = str3.index(str3.endIndex, offsetBy: -3)
+thirdCh = str3[thirdChIndex]
+print(thirdCh)
+
+// if문으로 유효성 검증 후 사용하기
+if thirdChIndex < str3.endIndex && thirdChIndex >= str3.startIndex {
+    print("aa")
+}
+
+
+
+let str5 = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+
+// apple developer string range https://developer.apple.com/documentation/foundation/nsstring/1410144-range
+
+let startIndexRange = str5.range(of: "nisi ut aliquip")
+let startIndex = startIndexRange!.lowerBound
+
+let endIndex = str5.index(startIndex, offsetBy: 14)
+
+let result = str5[startIndex...endIndex]
+print(result == "nisi ut aliquip")
+
+
+/*:
+ 
+ ## String Basic
+ 
+ */
+
+var btr = "Hello, Swift String"
+
+var bmptyStr = ""
+bmptyStr = String()
+
+let a = String(true)
+
+let b = String(12)
+
+let cd = String(12.34)
+
+let d = String(btr)
+
+// 16진수
+let hex = String(123, radix: 16)
+
+// 8진수
+let octal = String(123, radix: 8)
+
+// 2진수
+let binary = String(123, radix: 2)
+
+let repeatStr = "🦷🦷🦷🦷🦷🦷🦷🦷"
+
+let repeatStr2 = String(repeating:  "🦷", count: 7)
+
+let unicode = "\u{1f44f}"
+
+let e = "\(a) \(b)"
+let f = a+b
+
+btr += "!!"
+
+str.count
+
+str.count == 0
+
+str.isEmpty
