@@ -325,14 +325,16 @@ str.count
 str.count == 0
 
 str.isEmpty
+
+/*:
  ### Removing Substrings
  
  */
 
 var wtr = "Hello, Awesome Swift!!!"
 
-let lastCharIndex = wtr.index(before: wtr.endIndex)
-var removed = wtr.remove(at: lastCharIndex)
+let lastCharIndex2 = wtr.index(before: wtr.endIndex)
+var removed = wtr.remove(at: lastCharIndex2)
 
 wtr
 
@@ -376,19 +378,19 @@ subStr = wtr.drop { (ch) -> Bool in
 subStr
 
 
-let str3 = "Lorem ipsum dolor sit amet"
+let str34 = "Lorem ipsum dolor sit amet"
 
 
-var result = str3.replacingOccurrences(of: "i", with: "",
+var result3 = str34.replacingOccurrences(of: "i", with: "",
 options: NSString.CompareOptions.literal, range:nil)
 
 
-result = result.replacingOccurrences(of: "o", with: "O",
+result3 = result3.replacingOccurrences(of: "o", with: "O",
 options: NSString.CompareOptions.literal, range:nil)
 
 
-result
-print(result == "LOrem psum dOlOr st amet")
+result3
+print(result3 == "LOrem psum dOlOr st amet")
 
 /*:
  
@@ -398,7 +400,7 @@ print(result == "LOrem psum dOlOr st amet")
 
 let largeA = "Apple"
 let smallA = "apple"
-let b = "Banananaaa"
+let bb = "Banananaaa"
 
 // ascii 값 순서로 비교
 largeA == smallA
@@ -406,9 +408,9 @@ largeA == smallA
 largeA != smallA
 
 largeA < smallA
-largeA < b
+largeA < bb
 
-smallA < b
+smallA < bb
 
 // 대소문자 구분O
 largeA.compare(smallA) == .orderedSame
