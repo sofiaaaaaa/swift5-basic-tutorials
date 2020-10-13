@@ -325,3 +325,142 @@ str.count
 str.count == 0
 
 str.isEmpty
+ ### Removing Substrings
+ 
+ */
+
+var wtr = "Hello, Awesome Swift!!!"
+
+let lastCharIndex = wtr.index(before: wtr.endIndex)
+var removed = wtr.remove(at: lastCharIndex)
+
+wtr
+
+removed = wtr.removeFirst()
+wtr
+
+wtr.removeFirst(2)
+wtr
+
+wtr.removeLast()
+
+wtr
+
+wtr.removeLast(2)
+wtr
+
+
+if let range = wtr.range(of: "Awesome") {
+    wtr.removeSubrange(range)
+    wtr
+}
+
+wtr
+
+wtr.removeAll()
+wtr
+
+wtr.removeAll(keepingCapacity: true)
+
+wtr = "Hello, Awesome Swift!!!"
+
+var subStr = wtr.dropLast()
+
+subStr = wtr.dropLast(3)
+
+// 클로저를 파라미터로 받아서 문자열을 삭제하는 함수
+subStr = wtr.drop { (ch) -> Bool in
+    return ch != ","
+}
+
+subStr
+
+
+let str3 = "Lorem ipsum dolor sit amet"
+
+
+var result = str3.replacingOccurrences(of: "i", with: "",
+options: NSString.CompareOptions.literal, range:nil)
+
+
+result = result.replacingOccurrences(of: "o", with: "O",
+options: NSString.CompareOptions.literal, range:nil)
+
+
+result
+print(result == "LOrem psum dOlOr st amet")
+
+/*:
+ 
+ ### Comparing Strings
+ 
+*/
+
+let largeA = "Apple"
+let smallA = "apple"
+let b = "Banananaaa"
+
+// ascii 값 순서로 비교
+largeA == smallA
+
+largeA != smallA
+
+largeA < smallA
+largeA < b
+
+smallA < b
+
+// 대소문자 구분O
+largeA.compare(smallA) == .orderedSame
+
+// 대소문자 구분x
+largeA.caseInsensitiveCompare(smallA) == .orderedSame
+
+largeA.compare(smallA, options: [.caseInsensitive]) == .orderedSame
+
+let ttr = "Hello, Swift Programming"
+
+let prefix = "hello"
+let suffix = "Programming"
+
+// 대소문자 구분함
+ttr.hasPrefix(prefix)
+ttr.hasSuffix(suffix)
+
+
+ttr.lowercased().hasPrefix(prefix.lowercased())
+ 
+/*:
+ 
+ ### Finding Substrings
+ 
+ */
+
+var qtr = "Hello, Swift"
+
+qtr.contains("Swift")
+qtr.contains("swift") // false
+
+qtr.lowercased().contains("swift") // true
+
+qtr.range(of: "Swift")
+
+qtr.range(of: "swift", options: [.caseInsensitive])
+
+let str22 = "Hello, Programming"
+let str33 = str22.lowercased()
+
+var common = qtr.commonPrefix(with: str22)
+
+common = qtr.commonPrefix(with: str33)
+qtr.commonPrefix(with: str33, options: [.caseInsensitive])
+
+str33.commonPrefix(with: qtr, options: [.caseInsensitive])
+
+
+var count = 0
+for i in qtr {
+    if i.lowercased() == "i" {
+        count += 1
+    }
+}
