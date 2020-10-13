@@ -3,13 +3,23 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/jihooyim/Documents/Test/basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=1443&amp;EndingColumnNumber=16&amp;EndingLineNumber=95&amp;StartingColumnNumber=5&amp;StartingLineNumber=95&amp;Timestamp=624186015.551304"
+         documentLocation = "file:///Users/punky/Documents/Study/LS2010/swift5-basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=11&amp;CharacterRangeLoc=1443&amp;EndingColumnNumber=16&amp;EndingLineNumber=95&amp;StartingColumnNumber=5&amp;StartingLineNumber=95&amp;Timestamp=624284809.165888"
          lockedSize = "{680, 103}"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/jihooyim/Documents/Test/basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=30&amp;CharacterRangeLoc=2264&amp;EndingColumnNumber=0&amp;EndingLineNumber=152&amp;StartingColumnNumber=1&amp;StartingLineNumber=151&amp;Timestamp=624186015.551456"
+         documentLocation = "file:///Users/punky/Documents/Study/LS2010/swift5-basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=30&amp;CharacterRangeLoc=2264&amp;EndingColumnNumber=0&amp;EndingLineNumber=152&amp;StartingColumnNumber=1&amp;StartingLineNumber=151&amp;Timestamp=624284809.165976"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/punky/Documents/Study/LS2010/swift5-basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=14&amp;CharacterRangeLoc=8198&amp;EndingColumnNumber=13&amp;EndingLineNumber=519&amp;StartingColumnNumber=0&amp;StartingLineNumber=518&amp;Timestamp=624284809.166041"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/punky/Documents/Study/LS2010/swift5-basic-tutorials/StringAndCharacter.playground#CharacterRangeLen=52&amp;CharacterRangeLoc=8232&amp;EndingColumnNumber=0&amp;EndingLineNumber=524&amp;StartingColumnNumber=4&amp;StartingLineNumber=521&amp;Timestamp=624284809.166099"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
