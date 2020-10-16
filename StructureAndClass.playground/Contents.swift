@@ -204,6 +204,62 @@ v2.y = 34
 o2.x = 12
 o2.y = 34
 
+/*:
+ 
+ ## Identity Operator
+ 
+ ```
+ // Identical to Operator
+ classInstance === classInstance
+ 
+ // Not identical to Operator
+ classInstance !== classInstance
+ ```
+ 
+ */
+
+class A {
+    
+}
+
+let aa = A()
+let bb = aa
+let cc = A()
+
+aa === bb
+aa !== bb
+aa !== cc
+
+
+/*:
+ 
+ ## Nested Types
+
+```
+ String.CompareOptions
+ ```
+ 
+ */
+
+class One {
+    struct Two {
+        enum Three {
+            case a
+            
+            class Four {
+                
+            }
+        }
+    }
+    
+    var a = Two()
+}
+
+
+// One.Two로 접근해야함
+//let two: Two = Two()
+
+let two: One.Two = One.Two()
 
 
 
