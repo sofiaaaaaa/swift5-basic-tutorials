@@ -258,3 +258,122 @@ person?.car = rentedCar
 // unowned 키워드를 붙이면 deinit() 메모리해제시 호출되는 메서드가 실행된다. 
 person = nil
 rentedCar = nil
+
+
+/*:
+ #  Closure Capture List
+ Closure Capture List를 통해 클로저에서 발생하는 강한 참조 사이클을 해결하는 방법에 대해 공부합니다.
+ 
+    * 클로저가 인스턴스를 캡처하고, 인스턴스가 클로저를 강한 참조로 저장하고 있다면 인스턴스가 정상적으로 해지되지 않는다.
+ 
+*/
+
+// 강한 참조 Strong Reference 예시 코드
+
+class Car30 {
+    var totalDrivingDistance = 0.0
+    var totalUsedGas = 0.0
+    
+    lazy var gasMileage: () -> Double = {
+        return self.totalDrivingDistance / self.totalUsedGas
+    }
+    
+    func drive() {
+        self.totalDrivingDistance = 1200.0
+        self.totalUsedGas = 73.0
+    }
+    
+    deinit {
+        print("car30 deinit")
+    }
+}
+
+var myCar: Car30? = Car30()
+myCar?.drive()
+
+// Strong Reference  발생
+myCar?.gasMileage()
+
+// car deinit => gasMileage에서 myCar의 속성을 참조하고 있기 때문에 메모리 해제 deinit이 실행되지 않는다.
+myCar = nil
+
+
+/*:
+ ##  Closure Capture List
+
+```
+ { [list] (parameters) -> ReturnType in
+    Code
+ }
+ 
+ {
+    [list] in
+    code
+ }
+ 
+ // Value Type 캡쳐시
+ 
+ { [valueName] in
+    code
+ }
+ 
+ ```
+*/
+
+// Value Type 캡처
+var a = 0
+var b = 0
+// a의 복사본 캡처.
+let c = { [a] in print(a, b) }
+
+a = 1
+b = 2
+c()
+
+
+ 
+
+/*:
+ 
+```
+ // Reference Type 캡쳐시
+ { [weak instanceName, unowned instanceName] in
+    code
+ }
+ 
+ ```
+*/
+
+
+class Car50 {
+    var totalDrivingDistance = 0.0
+    var totalUsedGas = 0.0
+    
+    // unowned 참조 캡처 - 클로저 대상이 실행되기 전에 해제될 수 있고, 해제된 인스턴스 접근시 Runtime 에러가 날 수 있다. 캡처대상의 생명주기가 클로저와 같거나 길어야 한다. 
+    lazy var gasMileage: () -> Double = { [unowned self] in
+        return self.totalDrivingDistance / self.totalUsedGas
+    }
+    
+    //  weak 참조 캡처
+//    lazy var gasMileage: () -> Double = { [weak self] in
+//        // upwrapping해서 참조해야함.
+//        guard let strongSelf = self else { return 0.0 }
+//        return strongSelf.totalDrivingDistance / strongSelf.totalUsedGas
+//    }
+    
+    func drive() {
+        self.totalDrivingDistance = 1200.0
+        self.totalUsedGas = 73.0
+    }
+    
+    deinit {
+        print("car50 deinit")
+    }
+}
+
+var myCar50: Car50? = Car50()
+myCar50?.drive()
+
+myCar50?.gasMileage()
+
+myCar50 = nil
